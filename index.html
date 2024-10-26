@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloempot Themes - Flower Pot Showcase</title>
+    <style>
+        /* Import Space Grotesk font */
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(135deg, #1e1e1e, #4b4b4b);
+            color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 700px;
+            text-align: center;
+            background: rgba(30, 30, 30, 0.9);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+
+        .image-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #555;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            color: #d0d0d0;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .meme-container {
+            background: rgba(45, 45, 45, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .meme-container h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+
+        .meme-caption {
+            font-size: 1rem;
+            color: #bbb;
+            font-style: italic;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Beautiful Bloempot</h1>
+        
+        <div class="image-container">
+            <img src="bloempot.png" alt="Flower Pot">
+        </div>
+        
+        <div class="description">
+            <p>
+                A bloempot is a pot with a flower in it. That's very special! You can have bloempots in every material. It even plays Fortnite. That's why you are here, right? Anyway, it's in every color and every size. You can buy it anywhere. Come here to see a joke every day.
+            </p>
+        </div>
+    </div>
+
+    <div class="meme-container">
+        <h2>Joke Of The Hour 🌱</h2>
+        <p class="meme-caption" id="joke"></p>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Bloempot Fortnite lol | All rights reserved.
+    </div>
+
+    <script>
+        const jokes = [
+            "Why did the flower pot break up with the plant? It needed more space!",
+            "Dude, why did you even look up this website? Are you trying to plant your dreams?",
+            "What did the flower say to the pot? 'You crack me up!'",
+            "Why don’t flowers ever play hide and seek? Because they always get spotted!",
+            "What did one flower pot say to the other? 'I think I’m starting to feel rooted here!'",
+            "Why did the gardener plant a light bulb? Because he wanted to grow a power plant!",
+            "How do flowers greet each other? 'What’s up, bud?'",
+            "What do you call a flower that can’t stop telling jokes? A pun-ny plant!",
+            "Why was the flower pot always calm? Because it had great 'pot'-ential!",
+            "What did the pot say to its owner? 'I’m feeling a bit drained!'",
+            "How do you make a flower laugh? Tell it a bloom-er!",
+            "Why did the flower pot apply for a job? It wanted to earn some 'dirt' money!",
+            "Why did the plant go to therapy? It couldn’t stop 'leafing' its problems!",
+            "Why did the flower blush? Because it saw the garden hose!",
+            "What kind of flower loves to dance? A tulip, because it has the best moves!",
+            "Why are flower pots so good at keeping secrets? Because they know how to 'pot' their lips!",
+            "What did the bee say to the flower? 'Buzz you later!'",
+            "Why did the flower refuse to play cards? Because it was afraid of getting 'decked'!",
+            "What do you call a lazy flower? A 'sloth'-er!",
+            "Why did the flower pot sit on the couch all day? It was rooting for the home team!",
+            "What did the sunflower say to the daisy? 'I see you’ve grown since the last time!'"
+        ];
+
+        function updateJoke() {
+            const currentHour = new Date().getHours();
+            const jokeIndex = currentHour % jokes.length; // Get a joke index based on the current hour
+            document.getElementById('joke').textContent = jokes[jokeIndex];
+        }
+
+        updateJoke(); // Initial call to set the joke on page load
+        setInterval(updateJoke, 3600000); // Update every hour (3600000 milliseconds)
+    </script>
+
+</body>
+</html>
